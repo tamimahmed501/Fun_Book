@@ -24,33 +24,20 @@
             android:text="FunBook"
             android:gravity="center|left"
             android:layout_marginLeft="20dp"
-            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:layout_alignParentLeft="true"
             android:fontFamily="@font/anadika"
-            android:textSize="25dp"
+            android:textSize="21dp"
             android:textColor="#008EFF"/>
 
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="43dp"
-            android:layout_height="45dp"
-            app:cardCornerRadius="40dp"
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerInParent="true"
             android:layout_alignParentRight="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginRight="10dp">
-
-
-
-            <ImageView
-                android:id="@+id/imageView"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:src="@drawable/tamim1"
-                android:scaleType="centerCrop" />
-
-
-        </androidx.cardview.widget.CardView>
-
-
+            android:layout_marginRight="10dp"
+            android:src="@drawable/tamim"/>
 
 
 
@@ -59,10 +46,10 @@
 
 
 
+
         <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="67dp"
         android:id="@+id/frameLayout"/>
 
 
@@ -81,36 +68,18 @@
 
 
 
-    <LinearLayout
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
         android:layout_width="match_parent"
-        android:layout_height="68dp"
+        android:layout_height="wrap_content"
+        android:background="@color/statusBar"
         android:layout_alignParentBottom="true"
-        android:orientation="vertical">
-
-
-
-        <me.ibrahimsn.lib.SmoothBottomBar
-            android:id="@+id/smoothbottomber"
-            android:layout_width="match_parent"
-            android:layout_height="68dp"
-            app:backgroundColor="@color/statusBar"
-            app:indicatorRadius="30dp"
-            app:indicatorColor="#FFFFFF"
-            android:soundEffectsEnabled="true"
-            app:iconTint="#494949"
-            android:outlineAmbientShadowColor="@color/black"
-            android:layout_marginTop="3dp"
-            app:iconSize="28dp"
-            app:iconTintActive="#000000"
-            android:isScrollContainer="true"
-            app:menu="@menu/bottom_menu"/>
-
-
-
-
-
-    </LinearLayout>
-
+        app:itemTextAppearanceActive="@style/BottomNavigationView.ActiveText"
+        app:itemTextAppearanceInactive="@style/BottomNavigationView.InactiveText"
+        app:itemIconTint="@color/bottom_nav_item_color"
+        app:itemTextColor="@color/bottom_nav_item_color"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/bottom_menu" />
 
 
 

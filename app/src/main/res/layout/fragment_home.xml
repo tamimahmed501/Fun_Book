@@ -8,56 +8,131 @@
 
 
 
-
-    <com.google.android.material.tabs.TabLayout
+    <HorizontalScrollView
         android:layout_width="match_parent"
-        android:layout_height="35dp"
-        android:background="@color/statusBar"
-        app:tabIndicatorColor="@color/black"
-        app:tabTextColor="#303030"
-        app:tabSelectedTextColor="#000000"
-        android:elevation="9dp"
-        android:layout_marginBottom="1dp"
-        android:id="@+id/tabLayout">
+        android:layout_height="45dp"
+        android:elevation="7dp"
+        android:background="@color/white"
+        android:scrollbars="none">
 
-
-
-
-        <com.google.android.material.tabs.TabItem
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="trending"/>
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
 
 
 
-        <com.google.android.material.tabs.TabItem
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="mixed"/>
+
+            <TextView
+                android:id="@+id/text1"
+                android:foreground="@drawable/ripple_effect"
+                android:layout_width="wrap_content"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:layout_height="28dp"
+                android:background="@drawable/textradious"
+                android:text="RECENT"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:layout_marginLeft="20dp"
+                android:textSize="14dp"
+                android:textColor="#3E3838"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="5dp"
+                android:fontFamily="@font/kalpurush"/>
 
 
-        <com.google.android.material.tabs.TabItem
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Adult"/>
+
+            <TextView
+                android:id="@+id/text2"
+                android:foreground="@drawable/ripple_effect"
+                android:layout_width="wrap_content"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:layout_height="28dp"
+                android:text="MIXED"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="14dp"
+                android:textColor="#3E3838"
+                android:layout_margin="5dp"
+                android:fontFamily="@font/kalpurush"/>
 
 
+            <TextView
+                android:id="@+id/text3"
+                android:foreground="@drawable/ripple_effect"
+                android:layout_width="wrap_content"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:layout_height="28dp"
+                android:text="ADULT"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="14dp"
+                android:textColor="#3E3838"
+                android:layout_margin="5dp"
+                android:fontFamily="@font/kalpurush"/>
 
-        <com.google.android.material.tabs.TabItem
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Sports"/>
+
+            <TextView
+                android:id="@+id/text4"
+                android:foreground="@drawable/ripple_effect"
+                android:layout_width="wrap_content"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:layout_height="28dp"
+                android:text="ANIMAL"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="14dp"
+                android:textColor="#3E3838"
+                android:layout_margin="5dp"
+                android:fontFamily="@font/kalpurush"/>
 
 
+            <TextView
+                android:id="@+id/text5"
+                android:foreground="@drawable/ripple_effect"
+                android:layout_width="wrap_content"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:layout_height="28dp"
+                android:text="FOOTBALL"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="14dp"
+                android:textColor="#3E3838"
+                android:layout_margin="5dp"
+                android:fontFamily="@font/kalpurush"/>
 
-    </com.google.android.material.tabs.TabLayout>
 
+            <TextView
+                android:id="@+id/text6"
+                android:foreground="@drawable/ripple_effect"
+                android:layout_width="wrap_content"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:layout_height="28dp"
+                android:text="COUPLE"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="14dp"
+                android:textColor="#3E3838"
+                android:layout_margin="5dp"
+                android:fontFamily="@font/kalpurush"/>
+
+        </LinearLayout>
+
+
+    </HorizontalScrollView>
 
 
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="37dp"
+        android:layout_marginTop="45dp"
         android:id="@+id/frameLayout2"/>
 
 

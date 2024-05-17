@@ -207,27 +207,6 @@ public class top extends Fragment {
             });
 
 
-            final boolean[] isDLikeClicked = {false};
-
-            holder.dislike.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-
-                    isDLikeClicked[0] = !isDLikeClicked[0];
-
-
-                    if (isDLikeClicked[0]) {
-                        holder.dislike.setImageResource(R.drawable.dislike2);
-
-                        holder.like.setImageResource(R.drawable.like);
-
-                    } else {
-                        holder.dislike.setImageResource(R.drawable.dislike);
-                    }
-                }
-            });
-
-
 
 
             final boolean[] isLikeClicked = {false};
@@ -240,11 +219,10 @@ public class top extends Fragment {
 
 
                     if (isLikeClicked[0]) {
-                        holder.like.setImageResource(R.drawable.like2);
-                        holder.dislike.setImageResource(R.drawable.dislike);
+                        holder.like.setImageResource(R.drawable.hearts);
 
                     } else {
-                        holder.like.setImageResource(R.drawable.like);
+                        holder.like.setImageResource(R.drawable.love);
                     }
                 }
             });
@@ -283,7 +261,7 @@ public class top extends Fragment {
 
         private class MyViewHolder extends RecyclerView.ViewHolder {
             TextView name1, time;
-            ImageView postImages, like, dislike, fav, threeDot, share;
+            ImageView postImages, like, fav, threeDot, share;
 
             public MyViewHolder(@NonNull View itemView) {
                 super(itemView);
@@ -291,7 +269,7 @@ public class top extends Fragment {
                 time = itemView.findViewById(R.id.time);
                 postImages = itemView.findViewById(R.id.postImages);
                 like = itemView.findViewById(R.id.like);
-                dislike = itemView.findViewById(R.id.dislike);
+
                 fav = itemView.findViewById(R.id.fav);
                 threeDot = itemView.findViewById(R.id.threeDot);
                 share = itemView.findViewById(R.id.share);
