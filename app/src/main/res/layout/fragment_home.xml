@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -8,136 +8,152 @@
 
 
 
-    <HorizontalScrollView
+    <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:elevation="7dp"
-        android:background="@color/white"
-        android:scrollbars="none">
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
-        <LinearLayout
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:elevation="7dp"
+            android:background="@color/white"
+            app:layout_scrollFlags="scroll|enterAlways"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+
+
+
+                <TextView
+                    android:id="@+id/text1"
+                    android:foreground="@drawable/ripple_effect"
+                    android:layout_width="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:layout_height="28dp"
+                    android:background="@drawable/textradious"
+                    android:text="RECENT"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="14dp"
+                    android:textColor="#3E3838"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginRight="5dp"
+                    android:fontFamily="@font/kalpurush"/>
+
+
+
+                <TextView
+                    android:id="@+id/text2"
+                    android:foreground="@drawable/ripple_effect"
+                    android:layout_width="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:layout_height="28dp"
+                    android:text="MIXED"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textSize="14dp"
+                    android:textColor="#3E3838"
+                    android:layout_margin="5dp"
+                    android:fontFamily="@font/kalpurush"/>
+
+
+                <TextView
+                    android:id="@+id/text3"
+                    android:foreground="@drawable/ripple_effect"
+                    android:layout_width="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:layout_height="28dp"
+                    android:text="ADULT"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textSize="14dp"
+                    android:textColor="#3E3838"
+                    android:layout_margin="5dp"
+                    android:fontFamily="@font/kalpurush"/>
+
+
+                <TextView
+                    android:id="@+id/text4"
+                    android:foreground="@drawable/ripple_effect"
+                    android:layout_width="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:layout_height="28dp"
+                    android:text="ANIMAL"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textSize="14dp"
+                    android:textColor="#3E3838"
+                    android:layout_margin="5dp"
+                    android:fontFamily="@font/kalpurush"/>
+
+
+                <TextView
+                    android:id="@+id/text5"
+                    android:foreground="@drawable/ripple_effect"
+                    android:layout_width="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:layout_height="28dp"
+                    android:text="FOOTBALL"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textSize="14dp"
+                    android:textColor="#3E3838"
+                    android:layout_margin="5dp"
+                    android:fontFamily="@font/kalpurush"/>
+
+
+                <TextView
+                    android:id="@+id/text6"
+                    android:foreground="@drawable/ripple_effect"
+                    android:layout_width="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:layout_height="28dp"
+                    android:text="COUPLE"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textSize="14dp"
+                    android:textColor="#3E3838"
+                    android:layout_margin="5dp"
+                    android:fontFamily="@font/kalpurush"/>
+
+            </LinearLayout>
+
+
+        </HorizontalScrollView>
+
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+
+
+        <FrameLayout
+            android:id="@+id/frameLayout2"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal">
-
-
-
-
-            <TextView
-                android:id="@+id/text1"
-                android:foreground="@drawable/ripple_effect"
-                android:layout_width="wrap_content"
-                android:paddingLeft="20dp"
-                android:paddingRight="20dp"
-                android:layout_height="28dp"
-                android:background="@drawable/textradious"
-                android:text="RECENT"
-                android:gravity="center"
-                android:textStyle="bold"
-                android:layout_marginLeft="20dp"
-                android:textSize="14dp"
-                android:textColor="#3E3838"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp"
-                android:layout_marginRight="5dp"
-                android:fontFamily="@font/kalpurush"/>
-
-
-
-            <TextView
-                android:id="@+id/text2"
-                android:foreground="@drawable/ripple_effect"
-                android:layout_width="wrap_content"
-                android:paddingLeft="20dp"
-                android:paddingRight="20dp"
-                android:layout_height="28dp"
-                android:text="MIXED"
-                android:gravity="center"
-                android:textStyle="bold"
-                android:textSize="14dp"
-                android:textColor="#3E3838"
-                android:layout_margin="5dp"
-                android:fontFamily="@font/kalpurush"/>
-
-
-            <TextView
-                android:id="@+id/text3"
-                android:foreground="@drawable/ripple_effect"
-                android:layout_width="wrap_content"
-                android:paddingLeft="20dp"
-                android:paddingRight="20dp"
-                android:layout_height="28dp"
-                android:text="ADULT"
-                android:gravity="center"
-                android:textStyle="bold"
-                android:textSize="14dp"
-                android:textColor="#3E3838"
-                android:layout_margin="5dp"
-                android:fontFamily="@font/kalpurush"/>
-
-
-            <TextView
-                android:id="@+id/text4"
-                android:foreground="@drawable/ripple_effect"
-                android:layout_width="wrap_content"
-                android:paddingLeft="20dp"
-                android:paddingRight="20dp"
-                android:layout_height="28dp"
-                android:text="ANIMAL"
-                android:gravity="center"
-                android:textStyle="bold"
-                android:textSize="14dp"
-                android:textColor="#3E3838"
-                android:layout_margin="5dp"
-                android:fontFamily="@font/kalpurush"/>
-
-
-            <TextView
-                android:id="@+id/text5"
-                android:foreground="@drawable/ripple_effect"
-                android:layout_width="wrap_content"
-                android:paddingLeft="20dp"
-                android:paddingRight="20dp"
-                android:layout_height="28dp"
-                android:text="FOOTBALL"
-                android:gravity="center"
-                android:textStyle="bold"
-                android:textSize="14dp"
-                android:textColor="#3E3838"
-                android:layout_margin="5dp"
-                android:fontFamily="@font/kalpurush"/>
-
-
-            <TextView
-                android:id="@+id/text6"
-                android:foreground="@drawable/ripple_effect"
-                android:layout_width="wrap_content"
-                android:paddingLeft="20dp"
-                android:paddingRight="20dp"
-                android:layout_height="28dp"
-                android:text="COUPLE"
-                android:gravity="center"
-                android:textStyle="bold"
-                android:textSize="14dp"
-                android:textColor="#3E3838"
-                android:layout_margin="5dp"
-                android:fontFamily="@font/kalpurush"/>
-
-        </LinearLayout>
-
-
-    </HorizontalScrollView>
-
-
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="45dp"
-        android:id="@+id/frameLayout2"/>
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
 
 
 
 
 
 
-</RelativeLayout>
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

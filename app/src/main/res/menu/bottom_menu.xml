@@ -1,50 +1,23 @@
-<?xml version="1.0" encoding="utf-8"?>
+<!-- res/menu/bottom_nav_menu.xml -->
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-
-    <item android:title="Home"
+    <item
         android:id="@+id/home"
         android:icon="@drawable/home"
-
-        />
-    <item android:title="Favorite"
+        android:title="Home" />
+    <item
         android:id="@+id/fav"
         android:icon="@drawable/fav"
-
-        />
-    <item android:title="Popular"
+        android:title="Favorites" />
+    <item
         android:id="@+id/popular"
-        android:iconTint="#000000"
-        android:iconTintMode="src_atop"
         android:icon="@drawable/baseline_recommend_24"
-
-        />
-
-    <item android:title="Celebrity"
+        android:title="Popular" />
+    <item
         android:id="@+id/celebrity"
-        android:iconTintMode="src_atop"
         android:icon="@drawable/star"
-
-        />
-
-
-    <item android:title="Profile"
+        android:title="Celebrity" />
+    <item
         android:id="@+id/profile"
         android:icon="@drawable/baseline_person_4_24"
-
-        />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        android:title="Profile" />
 </menu>

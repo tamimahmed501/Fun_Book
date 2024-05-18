@@ -33,6 +33,10 @@ public class MainActivity extends AppCompatActivity {
         fragmentTransaction.replace(R.id.frameLayout, new home());
         fragmentTransaction.commit();
 
+
+
+
+
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @SuppressLint("NonConstantResourceId")
             @Override
@@ -40,24 +44,33 @@ public class MainActivity extends AppCompatActivity {
                 FragmentManager fm = getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fm.beginTransaction();
 
-                switch (item.getItemId()) {
-                    case R.id.home:
-                        fragmentTransaction.replace(R.id.frameLayout, new home());
-                        break;
-                    case R.id.fav:
-                        fragmentTransaction.replace(R.id.frameLayout, new fav());
-                        break;
-                    case R.id.popular:
-                        fragmentTransaction.replace(R.id.frameLayout, new home());
-                        break;
-                    case R.id.celebrity:
-                        fragmentTransaction.replace(R.id.frameLayout, new fav());
-                        break;
-                    case R.id.profile:
-                        fragmentTransaction.replace(R.id.frameLayout, new home());
-                        break;
-                    default:
-                        return false;
+
+                int itemId = item.getItemId();
+
+                if (itemId==R.id.home){
+
+                    fragmentTransaction.replace(R.id.frameLayout, new home());
+
+                } else if (itemId==R.id.fav){
+
+                    fragmentTransaction.replace(R.id.frameLayout, new fav());
+
+
+                } else if (itemId==R.id.popular){
+
+                    fragmentTransaction.replace(R.id.frameLayout, new home());
+
+
+                } else if (itemId==R.id.celebrity){
+
+                    fragmentTransaction.replace(R.id.frameLayout, new home());
+
+
+                } else if (itemId==R.id.profile){
+
+                    fragmentTransaction.replace(R.id.frameLayout, new home());
+
+
                 }
 
                 fragmentTransaction.commit();
