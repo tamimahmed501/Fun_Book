@@ -11,11 +11,9 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.view.LayoutInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.PopupMenu;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -38,7 +36,6 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -56,11 +53,8 @@ public class top extends Fragment {
                              Bundle savedInstanceState) {
         View myView = inflater.inflate(R.layout.fragment_top, container, false);
 
-
         // Initialize the dbHelper object
         dbHelper = new DBHelper(getContext());
-
-
 
         recyclerView = myView.findViewById(R.id.recyclerView);
         swipeRefreshLayout = myView.findViewById(R.id.swipeRefreshLayout);
@@ -86,7 +80,8 @@ public class top extends Fragment {
     }
 
     private void registerDownloadReceiver() {
-        getContext().registerReceiver(downloadReceiver, new IntentFilter(DownloadManager.ACTION_DOWNLOAD_COMPLETE));
+        IntentFilter filter = new IntentFilter(DownloadManager.ACTION_DOWNLOAD_COMPLETE);
+        getContext().registerReceiver(downloadReceiver, filter, Context.RECEIVER_NOT_EXPORTED);
     }
 
     private void unregisterDownloadReceiver() {
@@ -156,7 +151,7 @@ public class top extends Fragment {
 
         @Override
         public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-            HashMap<String,String> hashMap = arrayList.get(position);
+            HashMap<String, String> hashMap = arrayList.get(position);
             String namex = hashMap.get("name");
             String timex = hashMap.get("time");
             String id = hashMap.get("id");
@@ -171,87 +166,43 @@ public class top extends Fragment {
                     .error(R.drawable.load2)
                     .into(holder.postImages);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
             holder.threeDot.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
-
-
                     showCustomDialog(imagesx, id);
-
-
-
-
                 }
             });
-
-
-
 
             final boolean[] isLikeClicked = {false};
 
             holder.like.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
                     isLikeClicked[0] = !isLikeClicked[0];
-
 
                     if (isLikeClicked[0]) {
                         holder.like.setImageResource(R.drawable.hearts);
-
                     } else {
                         holder.like.setImageResource(R.drawable.love);
                     }
                 }
             });
 
-
-
-
-
             final boolean[] isFavClicked = {false};
 
             holder.fav.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
                     isFavClicked[0] = !isFavClicked[0];
-
 
                     if (isFavClicked[0]) {
                         holder.fav.setImageResource(R.drawable.fav2);
                         dbHelper.addFavorite(namex, timex, imagesx);
-
                     } else {
                         holder.fav.setImageResource(R.drawable.fav);
                     }
                 }
             });
-
-
-
         }
 
         @Override
@@ -269,7 +220,6 @@ public class top extends Fragment {
                 time = itemView.findViewById(R.id.time);
                 postImages = itemView.findViewById(R.id.postImages);
                 like = itemView.findViewById(R.id.like);
-
                 fav = itemView.findViewById(R.id.fav);
                 threeDot = itemView.findViewById(R.id.threeDot);
                 share = itemView.findViewById(R.id.share);
@@ -318,8 +268,6 @@ public class top extends Fragment {
         // Implement post report logic here
     }
 
-
-
     private void showCustomDialog(String imageUrl, String postId) {
         AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
         View dialogView = getLayoutInflater().inflate(R.layout.downloadalert, null);
@@ -329,8 +277,6 @@ public class top extends Fragment {
         TextView textDownload = dialogView.findViewById(R.id.text_download);
         TextView textReport = dialogView.findViewById(R.id.text_report);
         @SuppressLint({"MissingInflatedId", "LocalSuppress"}) ImageView close = dialogView.findViewById(R.id.close);
-
-
 
         close.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -357,5 +303,4 @@ public class top extends Fragment {
 
         alertDialog.show();
     }
-
 }

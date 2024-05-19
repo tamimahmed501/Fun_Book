@@ -3,8 +3,8 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="statusBar">#FFFFFF</color>
-    <color name="selected_color">#FC1262</color>
-    <color name="unselected_color">#0C0C0C</color>
+    <color name="selected_color">#020202</color>
+    <color name="unselected_color">#5C5C5C</color>
     <color name="laybg1">#F5F5F5</color>
-
+    <color name="blue">#303030</color>
 </resources>

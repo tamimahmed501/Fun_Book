@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
 
                 } else if (itemId==R.id.profile){
 
-                    fragmentTransaction.replace(R.id.frameLayout, new home());
+                    fragmentTransaction.replace(R.id.frameLayout, new profile());
 
 
                 }

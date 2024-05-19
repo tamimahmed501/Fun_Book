@@ -8,16 +8,49 @@
 
 
 
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@color/statusBar"
+        android:layout_height="50dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="20dp"
+            android:fontFamily="@font/kalpurush"
+            android:gravity="center|left"
+            android:text="FunBook"
+            android:textStyle="bold"
+            android:textColor="@color/blue"
+            android:textSize="24dp" />
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerInParent="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/tamim"/>
+
+
+
+    </RelativeLayout>
+
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
 
 
         <HorizontalScrollView
             android:layout_width="match_parent"
             android:layout_height="45dp"
-            android:elevation="7dp"
             android:background="@color/white"
             app:layout_scrollFlags="scroll|enterAlways"
             android:scrollbars="none">
@@ -43,7 +76,7 @@
                     android:textStyle="bold"
                     android:layout_marginLeft="20dp"
                     android:textSize="14dp"
-                    android:textColor="#3E3838"
+                    android:textColor="@color/blue"
                     android:layout_marginTop="5dp"
                     android:layout_marginBottom="5dp"
                     android:layout_marginRight="5dp"
@@ -62,7 +95,7 @@
                     android:gravity="center"
                     android:textStyle="bold"
                     android:textSize="14dp"
-                    android:textColor="#3E3838"
+                    android:textColor="@color/blue"
                     android:layout_margin="5dp"
                     android:fontFamily="@font/kalpurush"/>
 
@@ -78,7 +111,7 @@
                     android:gravity="center"
                     android:textStyle="bold"
                     android:textSize="14dp"
-                    android:textColor="#3E3838"
+                    android:textColor="@color/blue"
                     android:layout_margin="5dp"
                     android:fontFamily="@font/kalpurush"/>
 
@@ -94,7 +127,7 @@
                     android:gravity="center"
                     android:textStyle="bold"
                     android:textSize="14dp"
-                    android:textColor="#3E3838"
+                    android:textColor="@color/blue"
                     android:layout_margin="5dp"
                     android:fontFamily="@font/kalpurush"/>
 
@@ -110,7 +143,7 @@
                     android:gravity="center"
                     android:textStyle="bold"
                     android:textSize="14dp"
-                    android:textColor="#3E3838"
+                    android:textColor="@color/blue"
                     android:layout_margin="5dp"
                     android:fontFamily="@font/kalpurush"/>
 
@@ -126,7 +159,7 @@
                     android:gravity="center"
                     android:textStyle="bold"
                     android:textSize="14dp"
-                    android:textColor="#3E3838"
+                    android:textColor="@color/blue"
                     android:layout_margin="5dp"
                     android:fontFamily="@font/kalpurush"/>
 
